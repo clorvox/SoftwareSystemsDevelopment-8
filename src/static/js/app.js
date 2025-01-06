@@ -1,26 +1,41 @@
 function App() {
-    const { Container, Row, Col } = ReactBootstrap;
+    const { Container, Row, Col, Card } = ReactBootstrap;
+
     return (
         <Container>
-            <Row>
-                {CHRETIEN Clement caamille noel 2494020}
-                <Col md={{ offset: 3, span: 6 }} className="text-center">
-                    <p>CHRETIEN Clement Camille Noel 2494020</p>
+            {/* Fancy Header */}
+            <Row className="mt-5">
+                <Col md={{ offset: 2, span: 8 }}>
+                    <Card className="shadow-lg border-0">
+                        <Card.Body className="text-center" style={{ background: 'linear-gradient(45deg, #6a11cb, #2575fc)', color: 'white', borderRadius: '10px' }}>
+                            <h1 style={{ fontSize: '2.5em', fontWeight: 'bold', marginBottom: '10px' }}>
+                                CHRETIEN Clement Camille Noel 2494020
+                            </h1>
+                            <h2 style={{ fontSize: '1.8em', fontWeight: 'lighter' }}>
+                                Welcome to the cool ToDo App!
+                            </h2>
+                        </Card.Body>
+                    </Card>
                 </Col>
             </Row>
-            <Row>
-                <Col md={{ offset: 3, span: 6 }} className="text-center">
-                    <h1>ToDo App by [CHRETIEN Clement]</h1>
-                </Col>
-            </Row>
-            <Row>
+
+            {/* Content */}
+            <Row className="mt-5">
                 <Col md={{ offset: 3, span: 6 }}>
-                    <TodoListCard />
+                    <Card className="shadow">
+                        <Card.Body>
+                            <h3 className="text-center mb-4" style={{ fontWeight: 'bold', color: '#6a11cb' }}>
+                                Manage Your Tasks
+                            </h3>
+                            <TodoListCard />
+                        </Card.Body>
+                    </Card>
                 </Col>
             </Row>
         </Container>
     );
 }
+
 
 
 
